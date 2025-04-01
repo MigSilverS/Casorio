@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #e3be8a;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 0 15px;
+     /* background-color: #f5dfc7; */
+}
+
+.logo {
+    width: 10%;
+    margin-left: 5vw;
+    flex-shrink: 0;
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.login {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-right: 5vw;
+}
+
+.link_login {
+    background-color: transparent;
+    border-radius: 28px;
+    border: 1px solid black;
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+.link_login:hover {
+    color: #573521;;
+    background-color: #965a36;
+    transition: 0.5s;
+}
+
+.link_list_element, .link_login {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+
+}
+
+.link_list_element:hover {
+    color: #573521;
+    transition: 0.5s;
+}
+
+header {
+    /* background-image: url("../assets/fundo.jpg"); */
+    height: 125vh;
+    background-size: cover;   
+    background: url(../assets/curva.png) bottom no-repeat, url(../assets/fundo.jpg) bottom no-repeat;
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+
+.text_img {
+    width: 60vw;
+}
+
+.sessao_01 {
+    border-radius: 50%;
+    width: 420px;
+    height: 420px;
+    display: flex;
+    position: relative;
+    background-color: #e3be8a;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateY(-80%);
+    margin: 0 auto;
+    box-shadow: 0 2px 5px #965a36;
+    padding: 22.5px;
+}
+
+.cavacao {
+    background-image: url("../assets/cavacao.png");
+    background-size: cover;
+    margin: 0 auto;
+    height: 50%;
+    width: 50%;
+}
+
+.content_sessao_01 {
+    margin-bottom: 25%;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.sub_content_sessao_01 {
+    margin-top: 10%;
+    font-size: 18px;
+}
+
+.sessao_02 {
+    background-color: #e3be8a;
+    height: 70vh;
+    margin: -470px 0 0 0;
+}
+
+.content_sessao_02 {
+    margin-top: 15%;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin-top: 5%;
+}
+
+.icon1 {
+    background-image: url(../assets/icone1.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.icon2 {
+    background-image: url(../assets/icone2.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.icon3 {
+    background-image: url(../assets/icone3.png);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.icon_box {
+    top: -37.5px;
+    margin: 0 auto;
+    width: 8rem;
+    height: 8rem;
+}
+
+.card {
+    display: flex; 
+    flex-direction: column; 
+    border-radius: 16px  16px 16px 16px;
+    width: 25%;
+    height: 40vh;
+    box-shadow: 0 4px 8px #965a36;
+    overflow: hidden; 
+    border-color: #000000;
+}
+.card_body{
+    background-color: #e3be8a;
+    flex-grow: 1;
+    padding: 24px; 
+}
+
+.card_title{
+    color: #000000;
+    font-weight: bold;
+    font-size: 25px;
+    margin: 10px 0 0 0; 
+    padding: 0px; 
+     
+}
+.card_text{
+    line-height: 1.4;
+    margin: 40px 0px 0px 0px; 
+    font-size: 18px;
+    color: #202020;
+    
+}
