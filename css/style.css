@@ -15,7 +15,7 @@ body {
     display: flex;
     align-items: center;
     padding: 15px 0 15px;
-     /* background-color: #f5dfc7; */
+    /* background-color: #f5dfc7; */
 }
 
 .logo {
@@ -51,12 +51,14 @@ body {
 }
 
 .link_login:hover {
-    color: #573521;;
+    color: #573521;
+    ;
     background-color: #965a36;
     transition: 0.5s;
 }
 
-.link_list_element, .link_login {
+.link_list_element,
+.link_login {
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
@@ -71,7 +73,7 @@ body {
 header {
     /* background-image: url("../assets/fundo.jpg"); */
     height: 125vh;
-    background-size: cover;   
+    background-size: cover;
     background: url(../assets/curva.png) bottom no-repeat, url(../assets/fundo.jpg) bottom no-repeat;
 }
 
@@ -174,33 +176,233 @@ header {
 }
 
 .card {
-    display: flex; 
-    flex-direction: column; 
-    border-radius: 16px  16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px 16px 16px 16px;
     width: 25%;
     height: 40vh;
     box-shadow: 0 4px 8px #965a36;
-    overflow: hidden; 
+    overflow: hidden;
     border-color: #000000;
 }
-.card_body{
+
+.card_body {
     background-color: #e3be8a;
     flex-grow: 1;
-    padding: 24px; 
+    padding: 24px;
 }
 
-.card_title{
+.card_title {
     color: #000000;
     font-weight: bold;
     font-size: 25px;
-    margin: 10px 0 0 0; 
-    padding: 0px; 
-     
+    margin: 10px 0 0 0;
+    padding: 0px;
+
 }
-.card_text{
+
+.card_text {
     line-height: 1.4;
-    margin: 40px 0px 0px 0px; 
+    margin: 40px 0px 0px 0px;
     font-size: 18px;
     color: #202020;
-    
+
+}
+
+.gallery {
+    padding: 80px 0;
+    background-color: #e3be8a;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #573521;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    aspect-ratio: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 20px;
+    color: white;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+.gallery-overlay h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.gallery-overlay p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+.sessao_03 {
+    background-color: #e3be8a;
+    height: 100vh;
+}
+
+.content_sessao_03 {
+    margin-top: 5%;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    margin-top: 5%;
+    flex-wrap: wrap;
+}
+
+.foto {
+    width: 25%;
+    height: 40vh;
+    border-radius: 16px;
+    box-shadow: 0 4px 8px #965a36;
+    overflow: hidden;
+}
+
+.foto_body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.foto_body img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.foto_info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
+.foto:hover img {
+    transform: scale(1.1);
+}
+
+.foto:hover .foto_info {
+    transform: translateY(0);
+}
+
+.foto_titulo {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.foto_texto {
+    color: white;
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+footer {
+    background-color: #965a36;
+    padding: 40px 0;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo_footer {
+    background-color: #573521;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer_section {
+    flex: 1;
+    padding: 0 20px;
+}   
+
+footer img {
+    width: 100px;
+    height: 100px;
+}
+
+.footer_section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer_section p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+
+
+@media (max-width: 768px) {
+    .foto {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
