@@ -49,24 +49,35 @@ body {
     color: black;
     padding: 15px 20px;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .link_login:hover {
-    color: #573521;
+    color: white;
     background-color: #965a36;
-    transition: 0.5s;
+    border-color: #965a36;
 }
 
-.link_list_element,
-.link_login {
+.link_list_element {
+    position: relative;
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
 }
 
-.link_list_element:hover {
-    color: #573521;
-    transition: 0.5s;
+.link_list_element::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #965a36;
+    transition: width 0.3s ease;
+}
+
+.link_list_element:hover::after {
+    width: 100%;
 }
 
 header {
@@ -94,7 +105,7 @@ header {
     height: 420px;
     display: flex;
     position: relative;
-    background-color: #e3be8a;
+    background-color: #dfc8a9;
     flex-direction: column;
     justify-content: center;
     transform: translateY(-80%);
@@ -125,7 +136,7 @@ header {
 
 .sessao_02 {
     background-color: #e3be8a;
-    height: 70vh;
+    height: 60vh;
     margin: -470px 0 0 0;
 }
 
@@ -177,15 +188,21 @@ header {
 .card {
     display: flex;
     flex-direction: column;
-    border-radius: 16px 16px 16px 16px;
+    border-radius: 16px;
     width: 25%;
     box-shadow: 0 4px 8px #965a36;
     overflow: hidden;
-    border-color: #000000;
+    border: 1px solid rgba(150, 90, 54, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(150, 90, 54, 0.3);
 }
 
 .card_body {
-    background-color: #e3be8a;
+    background-color: #dfc8a9;
     flex-grow: 1;
     padding: 24px;
 }
@@ -276,7 +293,7 @@ header {
 
 .sessao_03 {
     background-color: #e3be8a;
-    height: 70vh;
+    height: 60vh;
     margin-top: 5%;
 }
 
@@ -347,8 +364,133 @@ header {
     opacity: 0.9;
 }
 
+.content_sessao_02 h1,
+.content_sessao_03 h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.content_sessao_02 h1::after,
+.content_sessao_03 h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #965a36, transparent);
+}
+
+.sessao_04 {
+    background-color: #e3be8a;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.content_sessao_04 h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: #573521;
+}
+
+.pacotes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.pacote {
+    background: #dfc8a9;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(150, 90, 54, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.pacote:hover {
+    transform: translateY(-10px);
+}
+
+.pacote.destaque {
+    transform: scale(1.05);
+    border: 2px solid #965a36;
+}
+
+.pacote.destaque:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.destaque_tag {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: #965a36;
+    color: white;
+    padding: 8px 40px;
+    transform: rotate(45deg);
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pacote_header {
+    background: linear-gradient(to bottom, #965a36, #573521);
+    padding: 30px 20px;
+    color: white;
+}
+
+.pacote_header h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.preco {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.pacote_body {
+    padding: 30px 20px;
+}
+
+.beneficios {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.beneficios li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #202020;
+}
+
+.btn_pacote {
+    display: inline-block;
+    background: #965a36;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn_pacote:hover {
+    background: #573521;
+    transform: translateY(-2px);
+}
+
 footer {
-    background-color: #965a36;
+    background: linear-gradient(to bottom, #965a36, #573521);
     padding: 40px 0;
     text-align: center;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -381,14 +523,32 @@ footer img {
 .footer_section h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: white;
 }
 
 .footer_section p {
     font-size: 16px;
     opacity: 0.9;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .sessao_03 {
+        margin-top: 20vh;
+    }
 }
 
 @media (max-width: 768px) {
+    .pacotes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pacote {
+        width: 90%;
+        max-width: 300px;
+    }
+
     .content_sessao_01 {
         display: none;
     }
@@ -426,7 +586,7 @@ footer img {
     .card_title {
         font-size: 20px;
     }
-    
+
     .card_text {
         margin: 10px 0px 0px 0px;
         font-size: 15px;
@@ -446,8 +606,8 @@ footer img {
         gap: 20px;
     }
 
-    footer {
-        margin: 100vh 0 0 0;
+    .sessao_04 {
+        margin-top: 80vh;
     }
 
     .footer_content {
@@ -456,6 +616,10 @@ footer img {
 }
 
 @media (max-width: 425px) {
+    .pacote {
+        width: 100%;
+    }
+
     .logo {
         width: 35%;
     }
@@ -477,12 +641,12 @@ footer img {
     }
 
     .sessao_03 {
-        margin-top: 60vh;
+        margin-top: 50vh;
     }
 }
 
 @media (max-width: 320px) {
     .sessao_03 {
-        margin-top: 80vh;
+        margin-top: 65vh;
     }
 }
