@@ -536,6 +536,10 @@ footer img {
     .sessao_03 {
         margin-top: 20vh;
     }
+
+    .sessao_02 {
+        height: 70vh;
+    }
 }
 
 @media (max-width: 768px) {
@@ -565,6 +569,7 @@ footer img {
 
     .sessao_02 {
         margin: -300px 0 0 0;
+        height: 85vh;
     }
 
     .cards {
@@ -638,6 +643,7 @@ footer img {
 
     .sessao_02 {
         margin: -200px 0 0 0;
+        height: 60vh;
     }
 
     .sessao_03 {
