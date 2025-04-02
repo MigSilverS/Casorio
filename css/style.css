@@ -7,7 +7,8 @@ body {
     width: 100%;
     height: 100%;
     background-color: #e3be8a;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .navbar {
@@ -52,7 +53,6 @@ body {
 
 .link_login:hover {
     color: #573521;
-    ;
     background-color: #965a36;
     transition: 0.5s;
 }
@@ -62,7 +62,6 @@ body {
     font-size: 1.5rem;
     text-decoration: none;
     color: black;
-
 }
 
 .link_list_element:hover {
@@ -74,7 +73,8 @@ header {
     /* background-image: url("../assets/fundo.jpg"); */
     height: 125vh;
     background-size: cover;
-    background: url(../assets/curva.png) bottom no-repeat, url(../assets/fundo.jpg) bottom no-repeat;
+    background: url(../assets/curva.png) bottom no-repeat,
+        url(../assets/fundo.jpg) bottom no-repeat;
 }
 
 .text {
@@ -83,7 +83,6 @@ header {
     align-items: center;
     height: 70vh;
 }
-
 
 .text_img {
     width: 60vw;
@@ -116,7 +115,7 @@ header {
     margin-bottom: 25%;
     font-size: 30px;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .sub_content_sessao_01 {
@@ -134,7 +133,7 @@ header {
     margin-top: 15%;
     font-size: 30px;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .cards {
@@ -180,7 +179,6 @@ header {
     flex-direction: column;
     border-radius: 16px 16px 16px 16px;
     width: 25%;
-    height: 40vh;
     box-shadow: 0 4px 8px #965a36;
     overflow: hidden;
     border-color: #000000;
@@ -198,7 +196,6 @@ header {
     font-size: 25px;
     margin: 10px 0 0 0;
     padding: 0px;
-
 }
 
 .card_text {
@@ -206,7 +203,7 @@ header {
     margin: 40px 0px 0px 0px;
     font-size: 18px;
     color: #202020;
-
+    text-align: start;
 }
 
 .gallery {
@@ -218,7 +215,7 @@ header {
 .gallery h2 {
     font-size: 30px;
     margin-bottom: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: #573521;
 }
 
@@ -269,7 +266,7 @@ header {
 .gallery-overlay h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .gallery-overlay p {
@@ -277,23 +274,16 @@ header {
     opacity: 0.9;
 }
 
-@media (max-width: 768px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-}
-
 .sessao_03 {
     background-color: #e3be8a;
-    height: 100vh;
+    height: 70vh;
+    margin-top: 5%;
 }
 
 .content_sessao_03 {
-    margin-top: 5%;
     font-size: 30px;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .fotos {
@@ -348,7 +338,7 @@ header {
     color: white;
     font-size: 25px;
     margin-bottom: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .foto_texto {
@@ -361,7 +351,7 @@ footer {
     background-color: #965a36;
     padding: 40px 0;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .logo_footer {
@@ -381,7 +371,7 @@ footer {
 .footer_section {
     flex: 1;
     padding: 0 20px;
-}   
+}
 
 footer img {
     width: 100px;
@@ -398,11 +388,101 @@ footer img {
     opacity: 0.9;
 }
 
-
-
 @media (max-width: 768px) {
+    .content_sessao_01 {
+        display: none;
+    }
+
+    .sessao_01 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .cavacao {
+        width: 100%;
+        height: 100%;
+    }
+
+    .sessao_02 {
+        margin: -300px 0 0 0;
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .card {
+        display: flex;
+        width: 90vw;
+    }
+
+    .icon_box {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .card_title {
+        font-size: 20px;
+    }
+    
+    .card_text {
+        margin: 10px 0px 0px 0px;
+        font-size: 15px;
+    }
+
+    .sessao_03 {
+        margin-top: 35%;
+    }
+
     .foto {
         width: 80%;
         margin-bottom: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    footer {
+        margin: 100vh 0 0 0;
+    }
+
+    .footer_content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {
+    .logo {
+        width: 35%;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .text_img {
+        width: 100vw;
+    }
+
+    .list {
+        display: none;
+    }
+
+    .sessao_02 {
+        margin: -200px 0 0 0;
+    }
+
+    .sessao_03 {
+        margin-top: 60vh;
+    }
+}
+
+@media (max-width: 320px) {
+    .sessao_03 {
+        margin-top: 80vh;
     }
 }
