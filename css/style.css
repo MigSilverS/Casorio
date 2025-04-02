@@ -548,6 +548,10 @@ footer img {
         align-items: center;
     }
 
+    .text_img {
+        width: 100vw;
+    }
+
     .pacote {
         width: 90%;
         max-width: 300px;
@@ -618,6 +622,14 @@ footer img {
     .footer_content {
         flex-direction: column;
     }
+
+    .list {
+        display: none;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
 }
 
 @media (max-width: 425px) {
@@ -635,10 +647,6 @@ footer img {
 
     .text_img {
         width: 100vw;
-    }
-
-    .list {
-        display: none;
     }
 
     .sessao_02 {
